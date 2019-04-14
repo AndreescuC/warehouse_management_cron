@@ -1,0 +1,4 @@
+* * * * * php /var/www/html/bin/console test:test >> /var/www/html/cron/logs/test_cron.log 2>&1
+* * * * * php /var/www/html/bin/console order:archive >> /var/www/html/cron/logs/order_archive.log 2>&1
+* * * * * php /var/www/html/bin/console shipment:archive >> /var/www/html/cron/logs/shipment_archive.log 2>&1
+* * * * * php /var/www/html/bin/console shipment:sync >> /var/www/html/cron/logs/shipment_sync.log 2>&1
