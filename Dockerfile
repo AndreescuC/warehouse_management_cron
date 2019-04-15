@@ -35,6 +35,9 @@ RUN systemctl enable crond
 # Copy Sf project
 COPY . /var/www/html
 
+# Install Application dependencies
+RUN php composer.phar install
+
 # Setup crons
 RUN mkdir /var/www/html/cron
 RUN mkdir /var/www/html/cron/logs
