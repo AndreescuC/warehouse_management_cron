@@ -36,7 +36,8 @@ RUN systemctl enable crond
 COPY . /var/www/html
 
 # Install Application dependencies
-RUN php /var/www/html/composer.phar install
+WORKDIR /var/www/html
+RUN php composer.phar install
 
 # Setup crons
 RUN mkdir /var/www/html/cron
